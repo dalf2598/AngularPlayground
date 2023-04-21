@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-game-control (emitter) = "onNumberEmitted($event)"></app-game-control>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+      <app-even
+      *ngFor="let oddNumber of oddNumbers"
+      [number]="oddNumber"
+      ></app-even>
+      
+      <app-odd
+      *ngFor="let evenNumber of evenNumbers"
+      [number]="evenNumber"
+      ></app-odd>
+      </div>
+    </div>
+  </div>
+</div>
